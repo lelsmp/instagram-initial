@@ -1,0 +1,15 @@
+page-about {
+    font-family: Raleway!important;
+
+    ion-navbar{
+        box-shadow: none!important;
+    }
+
+    ion-header::after {
+        background-image: none!important;
+        }
+    ion-navbar{
+        background-color: #fff!important;
+        color: #fff!important;
+    }
+}

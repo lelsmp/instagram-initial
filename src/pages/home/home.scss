@@ -1,0 +1,83 @@
+page-home{
+    /**.navbar{
+        height: 15px!important;
+    }**/
+
+    ion-card{
+        box-shadow: none !important;
+        .card-title{
+            font-family: Raleway;
+            font-size: 1.2em;
+            position: relative;
+            width: 80px;
+            top: -20px;
+            left: 40px;
+        }
+    
+        .icon-feed{
+            font-size: 2.2em!important;
+            padding: 2%;
+            position: relative;
+        }
+
+        .icon-align-bookmark{
+            font-size: 2.2em!important;
+            position: relative;
+            left: 50%;
+        }
+
+        .icon-align{
+            font-size: 2.2em!important;
+            position: relative;
+            left: 77%;
+            top: 10px;
+        }
+    
+        .icon-pp{
+            font-size: 2.2em!important;
+            padding: 2%;
+            position: relative;
+            top: 11px;
+        }
+
+        .card-subtitle{
+            font-family: Raleway;
+            padding-left: 15px;
+        }
+        
+
+
+    }
+    
+
+    ion-title{
+        font-family: Raleway!important;
+        font-weight:400!important;
+        color: #300!important;
+    }
+
+    .icon-header1{
+        font-size: 2em!important;
+        position: absolute;
+
+        left: 73%;
+        top: 16%!important;
+    }
+
+    .icon-header2{
+        font-size: 2em!important;
+        position: absolute;
+
+        left: 82%;
+        top: 16%!important;
+    }
+
+    .icon-header3{
+        font-size: 2em!important;
+        position: absolute;
+
+        left: 91%;
+        top: 18%!important;
+    }
+}
+
