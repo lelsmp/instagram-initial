@@ -1,0 +1,80 @@
+page-profile {
+    font-family: Raleway!important;
+
+    /**ion-header::after{
+        background-image: none;
+    }**/
+
+    ion-card{
+        width: 5em!important;
+        text-align: center;
+        /**display: inline-flex;**/
+        position: relative;
+        display: inline-block;
+        left: 26%;
+        top: 4%;
+        margin: 0!important;
+        margin-top: 10px!important;
+        box-shadow: none !important;
+    }
+
+    ion-card .card-subtitle{
+        font-weight: bold!important;
+    }
+
+    .icon-header1{
+        font-size: 2em;
+        position: absolute;
+        left: 80%;
+        top: 25%;
+    }
+
+    .icon-header2{
+        font-size: 2em;
+        position: absolute;
+        left: 88%;
+        top: 25%;
+    }
+
+    .icon-pp{
+        font-size: 6.5em;
+        position: absolute;
+    }
+
+
+
+    .line-2 {
+        height: 1px;
+        background: black!important;
+        position: relative;
+        top: 12%;
+        width: 1500px;
+        right: 50%;
+    }
+    
+    p{
+        margin: 0;
+        position: relative;
+        top: 10%;
+    }
+
+    .icon-photo{
+        font-size: 8em;
+        position: relative;
+        left: 35%;
+        top: 25%;
+    }
+
+    ion-card .feed{
+
+        width: 100%;
+    }
+
+    .p-photo{
+        
+        position: relative;
+        left: 35%;
+        top: 26%;
+    }
+
+}
