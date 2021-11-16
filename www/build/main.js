@@ -18,6 +18,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
  * Generated class for the ProfilePage page.
  *
@@ -25,20 +26,81 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var ProfilePage = /** @class */ (function () {
-    function ProfilePage(navCtrl, navParams) {
+    function ProfilePage(navCtrl, navParams, platform, actionsheetCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.platform = platform;
+        this.actionsheetCtrl = actionsheetCtrl;
     }
     ProfilePage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ProfilePage');
     };
+    ProfilePage.prototype.openMenu = function () {
+        var actionSheet = this.actionsheetCtrl.create({
+            title: 'Options',
+            cssClass: 'action-sheets-basic-page',
+            buttons: [
+                {
+                    text: 'Settings',
+                    icon: !this.platform.is('ios') ? 'cog' : null,
+                    handler: function () {
+                        console.log('Report clicked');
+                    }
+                },
+                {
+                    text: 'Archive',
+                    icon: !this.platform.is('ios') ? 'images' : null,
+                    handler: function () {
+                        console.log('Save clicked');
+                    }
+                },
+                {
+                    text: 'Your Activity',
+                    icon: !this.platform.is('ios') ? 'list' : null,
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Insights',
+                    icon: !this.platform.is('ios') ? 'stats' : null,
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'QR Code',
+                    icon: !this.platform.is('ios') ? 'camera' : null,
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Saved',
+                    icon: !this.platform.is('ios') ? 'bookmark' : null,
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Discover People',
+                    icon: !this.platform.is('ios') ? 'person-add' : null,
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                }
+            ]
+        });
+        actionSheet.present();
+    };
     ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-profile',template:/*ion-inline-start:"C:\Users\letma\Documents\projetos\instagram\src\pages\profile\profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>Your Profile</ion-title>\n\n    <ion-icon class="icon-header1" ios="ios-add" md="md-add"></ion-icon>\n    <ion-icon class="icon-header2" ios="ios-menu" md="md-menu"></ion-icon>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-icon class="icon-pp"  ios="ios-contact" md="md-contact"></ion-icon>\n\n  <ion-card>\n    <div class="card-title">0</div>\n    <div class="card-subtitle">Posts</div>\n  </ion-card>\n\n  <ion-card>\n    <div class="card-title">490</div>\n    <div class="card-subtitle">Followers</div>\n  </ion-card>\n\n  <ion-card>\n    <div class="card-title">670</div>\n    <div class="card-subtitle">Following</div>\n  </ion-card>\n  <div class="line-1"></div>\n\n  <p>Your name</p>\n  <p>Your Bio</p>\n\n  <div class="line-2"></div>\n\n\n  \n     <ion-icon class="icon-photo" ios="ios-images" md="md-images"></ion-icon>\n     <p class="p-photo">No photos yet</p>\n  \n \n\n</ion-content>\n'/*ion-inline-end:"C:\Users\letma\Documents\projetos\instagram\src\pages\profile\profile.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"C:\Users\letma\Documents\projetos\instagram\src\pages\profile\profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>Your Profile</ion-title>\n\n    <ion-icon class="icon-header1" ios="ios-add" md="md-add"></ion-icon>\n    <ion-icon class="icon-header2" ios="ios-menu" md="md-menu" (click)="openMenu()"></ion-icon>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-icon class="icon-pp"  ios="ios-contact" md="md-contact"></ion-icon>\n\n  <ion-card>\n    <div class="card-title">0</div>\n    <div class="card-subtitle">Posts</div>\n  </ion-card>\n\n  <ion-card>\n    <div class="card-title">490</div>\n    <div class="card-subtitle">Followers</div>\n  </ion-card>\n\n  <ion-card>\n    <div class="card-title">670</div>\n    <div class="card-subtitle">Following</div>\n  </ion-card>\n  <div class="line-1"></div>\n\n  <p>Your Name</p>\n  <p>Your Bio</p>\n\n  <div class="line-2"></div>\n\n\n  \n     <ion-icon class="icon-photo" ios="ios-images" md="md-images"></ion-icon>\n     <p class="p-photo">No photos yet</p>\n  \n \n\n</ion-content>\n'/*ion-inline-end:"C:\Users\letma\Documents\projetos\instagram\src\pages\profile\profile.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]) === "function" && _d || Object])
     ], ProfilePage);
     return ProfilePage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=profile.js.map
@@ -68,14 +130,17 @@ webpackEmptyAsyncContext.id = 110;
 var map = {
 	"../pages/profile/profile.module": [
 		274,
-		0
+		4
+	],
+	"../pages/userprofile/userprofile.module": [
+		275
 	]
 };
 function webpackAsyncContext(req) {
 	var ids = map[req];
 	if(!ids)
 		return Promise.reject(new Error("Cannot find module '" + req + "'."));
-	return __webpack_require__.e(ids[1]).then(function() {
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
 		return __webpack_require__(ids[0]);
 	});
 };
@@ -206,7 +271,7 @@ var AboutPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-about',template:/*ion-inline-start:"C:\Users\letma\Documents\projetos\instagram\src\pages\about\about.html"*/'<ion-header translucent>\n  <ion-navbar>\n    <ion-toolbar>\n\n      <ion-searchbar  \n      placeholder = \'Search users...\'\n      [(ngModel)]="searchTerm" \n      animated>\n      </ion-searchbar>\n\n    </ion-toolbar>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n  \n  <ion-list>\n\n    <ion-item *ngFor="let user of users | filter:searchTerm">\n\n      <ion-label>{{user.name}}</ion-label>\n      <ion-label>{{user.username}}</ion-label>\n\n    </ion-item>\n\n  </ion-list>\n  \n</ion-content>\n'/*ion-inline-end:"C:\Users\letma\Documents\projetos\instagram\src\pages\about\about.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], AboutPage);
     return AboutPage;
 }());
@@ -252,7 +317,7 @@ var ContactPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-contact',template:/*ion-inline-start:"C:\Users\letma\Documents\projetos\instagram\src\pages\contact\contact.html"*/'\n\n<ion-header>\n  <ion-navbar>\n\n    <ion-icon class="icon-header" ios="logo-instagram" md="logo-instagram"></ion-icon>\n\n    \n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n \n  <ion-slides direction="vertical" autoplay=2000 loop="true">\n    <ion-slide *ngFor="let slide of slides">\n\n      <img [src]="slide.image" class="slide-image"/>\n  \n    </ion-slide>\n    \n  </ion-slides>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\letma\Documents\projetos\instagram\src\pages\contact\contact.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], ContactPage);
     return ContactPage;
 }());
@@ -279,17 +344,56 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl) {
+    function HomePage(navCtrl, platform, actionsheetCtrl) {
         this.navCtrl = navCtrl;
+        this.platform = platform;
+        this.actionsheetCtrl = actionsheetCtrl;
     }
+    HomePage.prototype.openMenu = function () {
+        var actionSheet = this.actionsheetCtrl.create({
+            title: 'Options',
+            cssClass: 'action-sheets-basic-page',
+            buttons: [
+                {
+                    text: 'Report',
+                    icon: !this.platform.is('ios') ? 'flag' : null,
+                    handler: function () {
+                        console.log('Report clicked');
+                    }
+                },
+                {
+                    text: 'Save',
+                    icon: !this.platform.is('ios') ? 'download' : null,
+                    handler: function () {
+                        console.log('Save clicked');
+                    }
+                },
+                {
+                    text: 'Cancel',
+                    role: 'destructive',
+                    icon: !this.platform.is('ios') ? 'close' : null,
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                }
+            ]
+        });
+        actionSheet.present();
+    };
+    HomePage.prototype.whenClicked = function () {
+        console.log("button clicked");
+        this.navCtrl.push('UserprofilePage');
+    };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\letma\Documents\projetos\instagram\src\pages\home\home.html"*/'<ion-header style="height: 50px;">\n  <ion-navbar style="height: 30px;">\n    <ion-title >Instagram</ion-title>\n\n    <ion-icon class="icon-header1" ios="ios-add" md="md-add"></ion-icon>\n    <ion-icon class="icon-header2" ios="ios-heart" md="md-heart"></ion-icon>\n    <ion-icon class="icon-header3" ios="ios-text" md="md-text"></ion-icon>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="card-background-page">\n\n  <ion-card>\n    <ion-icon class="icon-pp"  ios="ios-contact" md="md-contact"></ion-icon>\n    <ion-icon class="icon-feed"  class="icon-align" ios="ios-more" md="md-more"></ion-icon>\n\n\n    <div class="card-title">User_001</div>\n    <img src="assets/imgs/pic001.jpg"/>\n\n    <ion-icon  class="icon-feed"  ios="ios-heart" md="md-heart"></ion-icon>\n    <ion-icon  class="icon-feed"  name="chatbubbles"></ion-icon>\n    <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>\n\n    <ion-icon  class="icon-feed"  class="icon-align-bookmark" ios="ios-bookmark" md="md-bookmark"></ion-icon>\n\n    <div class="card-subtitle">41 Likes</div>\n  \n  </ion-card>\n\n  <ion-card>\n\n    \n    <ion-icon class="icon-pp"   ios="ios-contact" md="md-contact"></ion-icon>\n    <ion-icon  class="icon-feed" class="icon-align" ios="ios-more" md="md-more"></ion-icon>\n\n    <div class="card-title">User_002</div>\n    <img src="assets/imgs/pic002.jpg"/>\n\n    <ion-icon class="icon-feed"   ios="ios-heart" md="md-heart"></ion-icon>\n    <ion-icon  class="icon-feed"  name="chatbubbles"></ion-icon>\n    <ion-icon class="icon-feed"   ios="ios-redo" md="md-redo"></ion-icon>\n\n    <ion-icon class="icon-feed"  class="icon-align-bookmark"   ios="ios-bookmark" md="md-bookmark"></ion-icon>\n\n    <div class="card-subtitle">64 Likes</div>\n  </ion-card>\n\n  <ion-card>\n    <ion-icon class="icon-pp"   ios="ios-contact" md="md-contact"></ion-icon>\n    <ion-icon class="icon-feed" class="icon-align"  ios="ios-more" md="md-more"></ion-icon>\n\n    <div class="card-title">User_003</div>\n    <img src="assets/imgs/pic003.jpg"/>\n\n    <ion-icon class="icon-feed"   ios="ios-heart" md="md-heart"></ion-icon>\n    <ion-icon class="icon-feed"   name="chatbubbles"></ion-icon>\n    <ion-icon class="icon-feed"   ios="ios-redo" md="md-redo"></ion-icon>\n\n    <ion-icon class="icon-feed"  class="icon-align-bookmark"   ios="ios-bookmark" md="md-bookmark"></ion-icon>\n\n    <div class="card-subtitle">72 Likes</div>\n  </ion-card>\n\n  <ion-card>\n    <ion-icon class="icon-pp"   ios="ios-contact" md="md-contact"></ion-icon>\n    <ion-icon class="icon-feed"  class="icon-align" ios="ios-more" md="md-more"></ion-icon>\n\n    <div class="card-title">User_004</div>\n    <img src="assets/imgs/pic004.jpg"/>\n\n    <ion-icon class="icon-feed"   ios="ios-heart" md="md-heart"></ion-icon>\n    <ion-icon class="icon-feed"   name="chatbubbles"></ion-icon>\n    <ion-icon class="icon-feed"   ios="ios-redo" md="md-redo"></ion-icon>\n\n    <ion-icon class="icon-feed"  class="icon-align-bookmark"   ios="ios-bookmark" md="md-bookmark"></ion-icon>\n\n    <div class="card-subtitle">258 Likes</div>\n  </ion-card>\n\n  <ion-card>\n    <ion-icon class="icon-pp"   ios="ios-contact" md="md-contact"></ion-icon>\n    <ion-icon class="icon-feed" class="icon-align"  ios="ios-more" md="md-more"></ion-icon>\n\n    <div class="card-title">User_005</div>\n    <img src="assets/imgs/pic005.jpg"/>\n\n    <ion-icon class="icon-feed"   ios="ios-heart" md="md-heart"></ion-icon>\n    <ion-icon class="icon-feed"   name="chatbubbles"></ion-icon>\n    <ion-icon class="icon-feed"   ios="ios-redo" md="md-redo"></ion-icon>\n\n    <ion-icon class="icon-feed"  class="icon-align-bookmark"   ios="ios-bookmark" md="md-bookmark"></ion-icon>\n\n    <div class="card-subtitle">906 Likes</div>\n  </ion-card>\n  \n  <ion-card>\n    <ion-icon class="icon-pp"   ios="ios-contact" md="md-contact"></ion-icon>\n    <ion-icon class="icon-feed" class="icon-align"  ios="ios-more" md="md-more"></ion-icon>\n\n    <div class="card-title">User_006</div>\n    <img src="assets/imgs/pic006.jpg"/>\n\n    <ion-icon class="icon-feed"   ios="ios-heart" md="md-heart"></ion-icon>\n    <ion-icon class="icon-feed"   name="chatbubbles"></ion-icon>\n    <ion-icon class="icon-feed"   ios="ios-redo" md="md-redo"></ion-icon>\n\n    <ion-icon class="icon-feed"  class="icon-align-bookmark"   ios="ios-bookmark" md="md-bookmark"></ion-icon>\n\n    <div class="card-subtitle">498 Likes</div>\n  </ion-card>\n\n  <ion-card>\n    <ion-icon class="icon-pp"   ios="ios-contact" md="md-contact"></ion-icon>\n    <ion-icon class="icon-feed" class="icon-align"  ios="ios-more" md="md-more"></ion-icon>\n\n    <div class="card-title">User_007</div>\n    <img src="assets/imgs/pic007.jpg"/>\n\n    <ion-icon class="icon-feed"   ios="ios-heart" md="md-heart"></ion-icon>\n    <ion-icon class="icon-feed"   name="chatbubbles"></ion-icon>\n    <ion-icon class="icon-feed"   ios="ios-redo" md="md-redo"></ion-icon>\n\n    <ion-icon class="icon-feed"  class="icon-align-bookmark"   ios="ios-bookmark" md="md-bookmark"></ion-icon>\n\n    <div class="card-subtitle">100 Likes</div>\n  </ion-card>\n\n\n  </ion-content>\n  '/*ion-inline-end:"C:\Users\letma\Documents\projetos\instagram\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\letma\Documents\projetos\instagram\src\pages\home\home.html"*/'<ion-header style="height: 50px;">\n  <ion-navbar style="height: 30px;">\n    <ion-title >Instagram</ion-title>\n    \n    <button>\n      <ion-icon class="icon-header1" ios="ios-add" md="md-add"></ion-icon>\n    </button>\n    \n    <button>\n      <ion-icon class="icon-header2" ios="ios-heart" md="md-heart"></ion-icon>\n    </button>\n    \n    <button>\n      <ion-icon class="icon-header3" ios="ios-text" md="md-text"></ion-icon>\n    </button>\n    \n\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-card>\n\n    <button class="icon-pp" (click)="whenClicked()">\n    <ion-icon   ios="ios-contact" md="md-contact"></ion-icon>\n    </button>\n\n    <button class="icon-align" (click)="openMenu()">\n      <ion-icon  ios="ios-more" md="md-more"></ion-icon>\n    </button>\n    \n\n\n    <div class="card-title">User_001</div>\n    <img src="assets/imgs/pic001.jpg"/>\n\n    <button class="icon-feed">\n      <ion-icon    ios="ios-heart" md="md-heart"></ion-icon>\n    </button>\n   \n    <button class="icon-feed">\n      <ion-icon    name="chatbubbles"></ion-icon>\n    </button>\n    \n    <button class="icon-feed">\n      <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>\n    </button>\n    \n\n    <button class="icon-align-bookmark">\n      <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>\n    </button>\n    \n\n    <div class="card-subtitle">41 Likes</div>\n  \n  </ion-card>\n\n  <ion-card>\n\n    \n    <button class="icon-pp" (click)="whenClicked()">\n      <ion-icon   ios="ios-contact" md="md-contact"></ion-icon>\n    </button>\n  \n    <button class="icon-align" (click)="openMenu()">\n      <ion-icon  ios="ios-more" md="md-more"></ion-icon>\n    </button>\n\n    <div class="card-title">User_002</div>\n    <img src="assets/imgs/pic002.jpg"/>\n\n    <button class="icon-feed">\n      <ion-icon    ios="ios-heart" md="md-heart"></ion-icon>\n    </button>\n   \n    <button class="icon-feed">\n      <ion-icon    name="chatbubbles"></ion-icon>\n    </button>\n    \n    <button class="icon-feed">\n      <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>\n    </button>\n    \n\n    <button class="icon-align-bookmark">\n      <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>\n    </button>\n    <div class="card-subtitle">64 Likes</div>\n  </ion-card>\n\n  <ion-card>\n\n    <button class="icon-pp" (click)="whenClicked()">\n      <ion-icon   ios="ios-contact" md="md-contact"></ion-icon>\n    </button>\n  \n    <button class="icon-align" (click)="openMenu()">\n        <ion-icon  ios="ios-more" md="md-more"></ion-icon>\n    </button>\n\n    <div class="card-title">User_003</div>\n    <img src="assets/imgs/pic003.jpg"/>\n\n    <button class="icon-feed">\n      <ion-icon    ios="ios-heart" md="md-heart"></ion-icon>\n    </button>\n   \n    <button class="icon-feed">\n      <ion-icon    name="chatbubbles"></ion-icon>\n    </button>\n    \n    <button class="icon-feed">\n      <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>\n    </button>\n    \n\n    <button class="icon-align-bookmark">\n      <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>\n    </button>\n    <div class="card-subtitle">72 Likes</div>\n  </ion-card>\n\n  <ion-card>\n\n    <button class="icon-pp" (click)="whenClicked()">\n      <ion-icon   ios="ios-contact" md="md-contact"></ion-icon>\n    </button>\n\n    <button class="icon-align" (click)="openMenu()">\n      <ion-icon  ios="ios-more" md="md-more"></ion-icon>\n    </button>\n\n    <div class="card-title">User_004</div>\n    <img src="assets/imgs/pic004.jpg"/>\n\n    <button class="icon-feed">\n      <ion-icon    ios="ios-heart" md="md-heart"></ion-icon>\n    </button>\n   \n    <button class="icon-feed">\n      <ion-icon    name="chatbubbles"></ion-icon>\n    </button>\n    \n    <button class="icon-feed">\n      <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>\n    </button>\n    \n\n    <button class="icon-align-bookmark">\n      <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>\n    </button>\n    <div class="card-subtitle">258 Likes</div>\n  </ion-card>\n\n  <ion-card>\n\n    <button class="icon-pp" (click)="whenClicked()">\n      <ion-icon   ios="ios-contact" md="md-contact"></ion-icon>\n    </button>\n  \n    <button class="icon-align" (click)="openMenu()">\n      <ion-icon  ios="ios-more" md="md-more"></ion-icon>\n    </button>\n\n    <div class="card-title">User_005</div>\n    <img src="assets/imgs/pic005.jpg"/>\n\n    <button class="icon-feed">\n      <ion-icon    ios="ios-heart" md="md-heart"></ion-icon>\n    </button>\n   \n    <button class="icon-feed">\n      <ion-icon    name="chatbubbles"></ion-icon>\n    </button>\n    \n    <button class="icon-feed">\n      <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>\n    </button>\n    \n\n    <button class="icon-align-bookmark">\n      <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>\n    </button>\n    <div class="card-subtitle">906 Likes</div>\n  </ion-card>\n  \n  <ion-card>\n\n    <button class="icon-pp" (click)="whenClicked()">\n      <ion-icon   ios="ios-contact" md="md-contact"></ion-icon>\n    </button>\n\n    <button class="icon-align" (click)="openMenu()">\n      <ion-icon  ios="ios-more" md="md-more"></ion-icon>\n    </button>\n\n    <div class="card-title">User_006</div>\n    <img src="assets/imgs/pic006.jpg"/>\n\n    <button class="icon-feed">\n      <ion-icon    ios="ios-heart" md="md-heart"></ion-icon>\n    </button>\n   \n    <button class="icon-feed">\n      <ion-icon    name="chatbubbles"></ion-icon>\n    </button>\n    \n    <button class="icon-feed">\n      <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>\n    </button>\n    \n\n    <button class="icon-align-bookmark">\n      <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>\n    </button>\n    <div class="card-subtitle">498 Likes</div>\n  </ion-card>\n\n  <ion-card>\n\n    <button class="icon-pp" (click)="whenClicked()">\n      <ion-icon   ios="ios-contact" md="md-contact"></ion-icon>\n    </button>\n\n    <button class="icon-align" (click)="openMenu()">\n      <ion-icon  ios="ios-more" md="md-more"></ion-icon>\n    </button>\n\n    <div class="card-title">User_007</div>\n    <img src="assets/imgs/pic007.jpg"/>\n\n    <button class="icon-feed">\n      <ion-icon    ios="ios-heart" md="md-heart"></ion-icon>\n    </button>\n   \n    <button class="icon-feed">\n      <ion-icon    name="chatbubbles"></ion-icon>\n    </button>\n    \n    <button class="icon-feed">\n      <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>\n    </button>\n    \n\n    <button class="icon-align-bookmark">\n      <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>\n    </button>\n    <div class="card-subtitle">100 Likes</div>\n  </ion-card>\n\n\n  </ion-content>\n  '/*ion-inline-end:"C:\Users\letma\Documents\projetos\instagram\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]) === "function" && _c || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -328,12 +432,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_profile_profile__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ng2_search_filter__ = __webpack_require__(272);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_video_player_ngx__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_userprofile_userprofile_module__ = __webpack_require__(275);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -362,14 +468,16 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/userprofile/userprofile.module#UserprofilePageModule', name: 'UserprofilePage', segment: 'userprofile', priority: 'low', defaultHistory: [] }
                     ]
                 }),
-                __WEBPACK_IMPORTED_MODULE_11_ng2_search_filter__["a" /* Ng2SearchPipeModule */]
+                __WEBPACK_IMPORTED_MODULE_11_ng2_search_filter__["a" /* Ng2SearchPipeModule */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_userprofile_userprofile_module__["UserprofilePageModule"],
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_4__pages_about_about__["a" /* AboutPage */],
@@ -383,7 +491,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__["a" /* SplashScreen */],
                 __WEBPACK_IMPORTED_MODULE_11_ng2_search_filter__["a" /* Ng2SearchPipeModule */],
                 __WEBPACK_IMPORTED_MODULE_12__ionic_native_video_player_ngx__["a" /* VideoPlayer */],
-                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
+                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
             ]
         })
     ], AppModule);
@@ -431,12 +539,160 @@ var MyApp = /** @class */ (function () {
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\letma\Documents\projetos\instagram\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\Users\letma\Documents\projetos\instagram\src\app\app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
 
 //# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 275:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserprofilePageModule", function() { return UserprofilePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__userprofile__ = __webpack_require__(276);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var UserprofilePageModule = /** @class */ (function () {
+    function UserprofilePageModule() {
+    }
+    UserprofilePageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__userprofile__["a" /* UserprofilePage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__userprofile__["a" /* UserprofilePage */]),
+            ],
+        })
+    ], UserprofilePageModule);
+    return UserprofilePageModule;
+}());
+
+//# sourceMappingURL=userprofile.module.js.map
+
+/***/ }),
+
+/***/ 276:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserprofilePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(28);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the UserprofilePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var UserprofilePage = /** @class */ (function () {
+    function UserprofilePage(navCtrl, navParams, platform, actionsheetCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.platform = platform;
+        this.actionsheetCtrl = actionsheetCtrl;
+    }
+    UserprofilePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad UserprofilePage');
+    };
+    UserprofilePage.prototype.openMenu = function () {
+        var actionSheet = this.actionsheetCtrl.create({
+            title: 'Options',
+            cssClass: 'action-sheets-basic-page',
+            buttons: [
+                {
+                    text: 'Restrict',
+                    role: 'destructive',
+                    icon: !this.platform.is('ios') ? 'close' : null,
+                    handler: function () {
+                        console.log('Restrict clicked');
+                    }
+                },
+                {
+                    text: 'Block',
+                    role: 'destructive',
+                    icon: !this.platform.is('ios') ? 'key' : null,
+                    handler: function () {
+                        console.log('Block clicked');
+                    }
+                },
+                {
+                    text: 'Report',
+                    role: 'destructive',
+                    icon: !this.platform.is('ios') ? 'flag' : null,
+                    handler: function () {
+                        console.log('Report clicked');
+                    }
+                },
+                {
+                    text: 'About this acount',
+                    icon: !this.platform.is('ios') ? 'information' : null,
+                    handler: function () {
+                        console.log('About clicked');
+                    }
+                },
+                {
+                    text: 'Hide Your Story',
+                    icon: !this.platform.is('ios') ? 'eye-off' : null,
+                    handler: function () {
+                        console.log('Hide clicked');
+                    }
+                },
+                {
+                    text: 'Copy Profile URL',
+                    icon: !this.platform.is('ios') ? 'copy' : null,
+                    handler: function () {
+                        console.log('Copy clicked');
+                    }
+                },
+                {
+                    text: 'Share This Profile',
+                    icon: !this.platform.is('ios') ? 'share-alt' : null,
+                    handler: function () {
+                        console.log('Share clicked');
+                    }
+                }
+            ]
+        });
+        actionSheet.present();
+    };
+    UserprofilePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-userprofile',template:/*ion-inline-start:"C:\Users\letma\Documents\projetos\instagram\src\pages\userprofile\userprofile.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>User Profile</ion-title>\n\n\n    <ion-icon class="icon-header2" ios="ios-menu" md="md-menu" (click)="openMenu()"></ion-icon>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-icon class="icon-pp"  ios="ios-contact" md="md-contact"></ion-icon>\n\n  <ion-card>\n    <div class="card-title">0</div>\n    <div class="card-subtitle">Posts</div>\n  </ion-card>\n\n  <ion-card>\n    <div class="card-title">490</div>\n    <div class="card-subtitle">Followers</div>\n  </ion-card>\n\n  <ion-card>\n    <div class="card-title">670</div>\n    <div class="card-subtitle">Following</div>\n  </ion-card>\n  <div class="line-1"></div>\n\n  <p>Name</p>\n  <p>Bio</p>\n\n  <div class="line-2"></div>\n\n\n  \n     <ion-icon class="icon-photo" ios="ios-images" md="md-images"></ion-icon>\n     <p class="p-photo">No photos yet</p>\n  \n \n\n</ion-content>\n'/*ion-inline-end:"C:\Users\letma\Documents\projetos\instagram\src\pages\userprofile\userprofile.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]) === "function" && _d || Object])
+    ], UserprofilePage);
+    return UserprofilePage;
+    var _a, _b, _c, _d;
+}());
+
+//# sourceMappingURL=userprofile.js.map
 
 /***/ })
 
