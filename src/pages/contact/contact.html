@@ -1,11 +1,24 @@
+
+
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Reals
-    </ion-title>
+
+    <ion-icon class="icon-header" ios="logo-instagram" md="logo-instagram"></ion-icon>
+
+    
   </ion-navbar>
 </ion-header>
 
+
 <ion-content>
  
+  <ion-slides direction="vertical" autoplay=2000 loop="true">
+    <ion-slide *ngFor="let slide of slides">
+
+      <img [src]="slide.image" class="slide-image"/>
+  
+    </ion-slide>
+    
+  </ion-slides>
+
 </ion-content>

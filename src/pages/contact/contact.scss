@@ -1,3 +1,15 @@
 page-contact {
     font-family: Raleway!important;
+
+    ion-navbar{
+        text-align: center;
+
+    }
+
+    .icon-header{
+        font-size: 2em;
+        position: relative;
+        /**right: 12%;**/
+        top: -5%;
+    }
 }

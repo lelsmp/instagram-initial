@@ -25710,13 +25710,19 @@ page-about ion-header::after {
   background-image: none !important;
 }
 
-page-about ion-navbar {
-  background-color: #fff !important;
-  color: #fff !important;
-}
-
 page-contact {
   font-family: Raleway !important;
+}
+
+page-contact ion-navbar {
+  text-align: center;
+}
+
+page-contact .icon-header {
+  font-size: 2em;
+  position: relative;
+  /**right: 12%;**/
+  top: -5%;
 }
 
 page-home {
