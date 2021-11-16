@@ -25746,22 +25746,28 @@ page-home ion-card .card-title {
 }
 
 page-home ion-card .icon-feed {
-  font-size: 2.2em !important;
-  padding: 2%;
+  font-size: 1.7em !important;
+  padding: 0.5%;
   position: relative;
+  background-color: #fff;
+  background-image: none;
 }
 
 page-home ion-card .icon-align-bookmark {
-  font-size: 2.2em !important;
+  font-size: 1.7em !important;
   position: relative;
-  left: 50%;
+  left: 55%;
+  background-color: #fff;
+  background-image: none;
 }
 
 page-home ion-card .icon-align {
   font-size: 2.2em !important;
   position: relative;
-  left: 77%;
+  left: 70%;
   top: 10px;
+  background-color: #fff;
+  background-image: none;
 }
 
 page-home ion-card .icon-pp {
@@ -25769,6 +25775,8 @@ page-home ion-card .icon-pp {
   padding: 2%;
   position: relative;
   top: 11px;
+  background-color: #fff;
+  background-image: none;
 }
 
 page-home ion-card .card-subtitle {
@@ -25797,10 +25805,10 @@ page-home .icon-header2 {
 }
 
 page-home .icon-header3 {
-  font-size: 2em !important;
+  font-size: 2.3em !important;
   position: absolute;
   left: 91%;
-  top: 18% !important;
+  top: 12% !important;
 }
 
 page-profile {
@@ -25874,6 +25882,82 @@ page-profile ion-card .feed {
 }
 
 page-profile .p-photo {
+  position: relative;
+  left: 35%;
+  top: 26%;
+}
+
+page-userprofile {
+  font-family: Raleway !important;
+  /**ion-header::after{
+        background-image: none;
+    }**/
+}
+
+page-userprofile ion-card {
+  width: 5em !important;
+  text-align: center;
+  /**display: inline-flex;**/
+  position: relative;
+  display: inline-block;
+  left: 26%;
+  top: 4%;
+  margin: 0 !important;
+  margin-top: 10px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-userprofile ion-card .card-subtitle {
+  font-weight: bold !important;
+}
+
+page-userprofile .icon-header1 {
+  font-size: 2em;
+  position: absolute;
+  left: 80%;
+  top: 25%;
+}
+
+page-userprofile .icon-header2 {
+  font-size: 2em;
+  position: absolute;
+  left: 88%;
+  top: 25%;
+}
+
+page-userprofile .icon-pp {
+  font-size: 6.5em;
+  position: absolute;
+}
+
+page-userprofile .line-2 {
+  height: 1px;
+  background: black !important;
+  position: relative;
+  top: 12%;
+  width: 1500px;
+  right: 50%;
+}
+
+page-userprofile p {
+  margin: 0;
+  position: relative;
+  top: 10%;
+}
+
+page-userprofile .icon-photo {
+  font-size: 8em;
+  position: relative;
+  left: 35%;
+  top: 25%;
+}
+
+page-userprofile ion-card .feed {
+  width: 100%;
+}
+
+page-userprofile .p-photo {
   position: relative;
   left: 35%;
   top: 26%;

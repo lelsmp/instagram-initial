@@ -1,29 +1,57 @@
 <ion-header style="height: 50px;">
   <ion-navbar style="height: 30px;">
     <ion-title >Instagram</ion-title>
-
-    <ion-icon class="icon-header1" ios="ios-add" md="md-add"></ion-icon>
-    <ion-icon class="icon-header2" ios="ios-heart" md="md-heart"></ion-icon>
-    <ion-icon class="icon-header3" ios="ios-text" md="md-text"></ion-icon>
+    
+    <button>
+      <ion-icon class="icon-header1" ios="ios-add" md="md-add"></ion-icon>
+    </button>
+    
+    <button>
+      <ion-icon class="icon-header2" ios="ios-heart" md="md-heart"></ion-icon>
+    </button>
+    
+    <button>
+      <ion-icon class="icon-header3" ios="ios-text" md="md-text"></ion-icon>
+    </button>
+    
 
   </ion-navbar>
 </ion-header>
 
-<ion-content class="card-background-page">
+<ion-content>
 
   <ion-card>
-    <ion-icon class="icon-pp"  ios="ios-contact" md="md-contact"></ion-icon>
-    <ion-icon class="icon-feed"  class="icon-align" ios="ios-more" md="md-more"></ion-icon>
+
+    <button class="icon-pp" (click)="whenClicked()">
+    <ion-icon   ios="ios-contact" md="md-contact"></ion-icon>
+    </button>
+
+    <button class="icon-align" (click)="openMenu()">
+      <ion-icon  ios="ios-more" md="md-more"></ion-icon>
+    </button>
+    
 
 
     <div class="card-title">User_001</div>
     <img src="assets/imgs/pic001.jpg"/>
 
-    <ion-icon  class="icon-feed"  ios="ios-heart" md="md-heart"></ion-icon>
-    <ion-icon  class="icon-feed"  name="chatbubbles"></ion-icon>
-    <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>
+    <button class="icon-feed">
+      <ion-icon    ios="ios-heart" md="md-heart"></ion-icon>
+    </button>
+   
+    <button class="icon-feed">
+      <ion-icon    name="chatbubbles"></ion-icon>
+    </button>
+    
+    <button class="icon-feed">
+      <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>
+    </button>
+    
 
-    <ion-icon  class="icon-feed"  class="icon-align-bookmark" ios="ios-bookmark" md="md-bookmark"></ion-icon>
+    <button class="icon-align-bookmark">
+      <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>
+    </button>
+    
 
     <div class="card-subtitle">41 Likes</div>
   
@@ -32,98 +60,193 @@
   <ion-card>
 
     
-    <ion-icon class="icon-pp"   ios="ios-contact" md="md-contact"></ion-icon>
-    <ion-icon  class="icon-feed" class="icon-align" ios="ios-more" md="md-more"></ion-icon>
+    <button class="icon-pp" (click)="whenClicked()">
+      <ion-icon   ios="ios-contact" md="md-contact"></ion-icon>
+    </button>
+  
+    <button class="icon-align" (click)="openMenu()">
+      <ion-icon  ios="ios-more" md="md-more"></ion-icon>
+    </button>
 
     <div class="card-title">User_002</div>
     <img src="assets/imgs/pic002.jpg"/>
 
-    <ion-icon class="icon-feed"   ios="ios-heart" md="md-heart"></ion-icon>
-    <ion-icon  class="icon-feed"  name="chatbubbles"></ion-icon>
-    <ion-icon class="icon-feed"   ios="ios-redo" md="md-redo"></ion-icon>
+    <button class="icon-feed">
+      <ion-icon    ios="ios-heart" md="md-heart"></ion-icon>
+    </button>
+   
+    <button class="icon-feed">
+      <ion-icon    name="chatbubbles"></ion-icon>
+    </button>
+    
+    <button class="icon-feed">
+      <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>
+    </button>
+    
 
-    <ion-icon class="icon-feed"  class="icon-align-bookmark"   ios="ios-bookmark" md="md-bookmark"></ion-icon>
-
+    <button class="icon-align-bookmark">
+      <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>
+    </button>
     <div class="card-subtitle">64 Likes</div>
   </ion-card>
 
   <ion-card>
-    <ion-icon class="icon-pp"   ios="ios-contact" md="md-contact"></ion-icon>
-    <ion-icon class="icon-feed" class="icon-align"  ios="ios-more" md="md-more"></ion-icon>
+
+    <button class="icon-pp" (click)="whenClicked()">
+      <ion-icon   ios="ios-contact" md="md-contact"></ion-icon>
+    </button>
+  
+    <button class="icon-align" (click)="openMenu()">
+        <ion-icon  ios="ios-more" md="md-more"></ion-icon>
+    </button>
 
     <div class="card-title">User_003</div>
     <img src="assets/imgs/pic003.jpg"/>
 
-    <ion-icon class="icon-feed"   ios="ios-heart" md="md-heart"></ion-icon>
-    <ion-icon class="icon-feed"   name="chatbubbles"></ion-icon>
-    <ion-icon class="icon-feed"   ios="ios-redo" md="md-redo"></ion-icon>
+    <button class="icon-feed">
+      <ion-icon    ios="ios-heart" md="md-heart"></ion-icon>
+    </button>
+   
+    <button class="icon-feed">
+      <ion-icon    name="chatbubbles"></ion-icon>
+    </button>
+    
+    <button class="icon-feed">
+      <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>
+    </button>
+    
 
-    <ion-icon class="icon-feed"  class="icon-align-bookmark"   ios="ios-bookmark" md="md-bookmark"></ion-icon>
-
+    <button class="icon-align-bookmark">
+      <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>
+    </button>
     <div class="card-subtitle">72 Likes</div>
   </ion-card>
 
   <ion-card>
-    <ion-icon class="icon-pp"   ios="ios-contact" md="md-contact"></ion-icon>
-    <ion-icon class="icon-feed"  class="icon-align" ios="ios-more" md="md-more"></ion-icon>
+
+    <button class="icon-pp" (click)="whenClicked()">
+      <ion-icon   ios="ios-contact" md="md-contact"></ion-icon>
+    </button>
+
+    <button class="icon-align" (click)="openMenu()">
+      <ion-icon  ios="ios-more" md="md-more"></ion-icon>
+    </button>
 
     <div class="card-title">User_004</div>
     <img src="assets/imgs/pic004.jpg"/>
 
-    <ion-icon class="icon-feed"   ios="ios-heart" md="md-heart"></ion-icon>
-    <ion-icon class="icon-feed"   name="chatbubbles"></ion-icon>
-    <ion-icon class="icon-feed"   ios="ios-redo" md="md-redo"></ion-icon>
+    <button class="icon-feed">
+      <ion-icon    ios="ios-heart" md="md-heart"></ion-icon>
+    </button>
+   
+    <button class="icon-feed">
+      <ion-icon    name="chatbubbles"></ion-icon>
+    </button>
+    
+    <button class="icon-feed">
+      <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>
+    </button>
+    
 
-    <ion-icon class="icon-feed"  class="icon-align-bookmark"   ios="ios-bookmark" md="md-bookmark"></ion-icon>
-
+    <button class="icon-align-bookmark">
+      <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>
+    </button>
     <div class="card-subtitle">258 Likes</div>
   </ion-card>
 
   <ion-card>
-    <ion-icon class="icon-pp"   ios="ios-contact" md="md-contact"></ion-icon>
-    <ion-icon class="icon-feed" class="icon-align"  ios="ios-more" md="md-more"></ion-icon>
+
+    <button class="icon-pp" (click)="whenClicked()">
+      <ion-icon   ios="ios-contact" md="md-contact"></ion-icon>
+    </button>
+  
+    <button class="icon-align" (click)="openMenu()">
+      <ion-icon  ios="ios-more" md="md-more"></ion-icon>
+    </button>
 
     <div class="card-title">User_005</div>
     <img src="assets/imgs/pic005.jpg"/>
 
-    <ion-icon class="icon-feed"   ios="ios-heart" md="md-heart"></ion-icon>
-    <ion-icon class="icon-feed"   name="chatbubbles"></ion-icon>
-    <ion-icon class="icon-feed"   ios="ios-redo" md="md-redo"></ion-icon>
+    <button class="icon-feed">
+      <ion-icon    ios="ios-heart" md="md-heart"></ion-icon>
+    </button>
+   
+    <button class="icon-feed">
+      <ion-icon    name="chatbubbles"></ion-icon>
+    </button>
+    
+    <button class="icon-feed">
+      <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>
+    </button>
+    
 
-    <ion-icon class="icon-feed"  class="icon-align-bookmark"   ios="ios-bookmark" md="md-bookmark"></ion-icon>
-
+    <button class="icon-align-bookmark">
+      <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>
+    </button>
     <div class="card-subtitle">906 Likes</div>
   </ion-card>
   
   <ion-card>
-    <ion-icon class="icon-pp"   ios="ios-contact" md="md-contact"></ion-icon>
-    <ion-icon class="icon-feed" class="icon-align"  ios="ios-more" md="md-more"></ion-icon>
+
+    <button class="icon-pp" (click)="whenClicked()">
+      <ion-icon   ios="ios-contact" md="md-contact"></ion-icon>
+    </button>
+
+    <button class="icon-align" (click)="openMenu()">
+      <ion-icon  ios="ios-more" md="md-more"></ion-icon>
+    </button>
 
     <div class="card-title">User_006</div>
     <img src="assets/imgs/pic006.jpg"/>
 
-    <ion-icon class="icon-feed"   ios="ios-heart" md="md-heart"></ion-icon>
-    <ion-icon class="icon-feed"   name="chatbubbles"></ion-icon>
-    <ion-icon class="icon-feed"   ios="ios-redo" md="md-redo"></ion-icon>
+    <button class="icon-feed">
+      <ion-icon    ios="ios-heart" md="md-heart"></ion-icon>
+    </button>
+   
+    <button class="icon-feed">
+      <ion-icon    name="chatbubbles"></ion-icon>
+    </button>
+    
+    <button class="icon-feed">
+      <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>
+    </button>
+    
 
-    <ion-icon class="icon-feed"  class="icon-align-bookmark"   ios="ios-bookmark" md="md-bookmark"></ion-icon>
-
+    <button class="icon-align-bookmark">
+      <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>
+    </button>
     <div class="card-subtitle">498 Likes</div>
   </ion-card>
 
   <ion-card>
-    <ion-icon class="icon-pp"   ios="ios-contact" md="md-contact"></ion-icon>
-    <ion-icon class="icon-feed" class="icon-align"  ios="ios-more" md="md-more"></ion-icon>
+
+    <button class="icon-pp" (click)="whenClicked()">
+      <ion-icon   ios="ios-contact" md="md-contact"></ion-icon>
+    </button>
+
+    <button class="icon-align" (click)="openMenu()">
+      <ion-icon  ios="ios-more" md="md-more"></ion-icon>
+    </button>
 
     <div class="card-title">User_007</div>
     <img src="assets/imgs/pic007.jpg"/>
 
-    <ion-icon class="icon-feed"   ios="ios-heart" md="md-heart"></ion-icon>
-    <ion-icon class="icon-feed"   name="chatbubbles"></ion-icon>
-    <ion-icon class="icon-feed"   ios="ios-redo" md="md-redo"></ion-icon>
+    <button class="icon-feed">
+      <ion-icon    ios="ios-heart" md="md-heart"></ion-icon>
+    </button>
+   
+    <button class="icon-feed">
+      <ion-icon    name="chatbubbles"></ion-icon>
+    </button>
+    
+    <button class="icon-feed">
+      <ion-icon  class="icon-feed"  ios="ios-redo" md="md-redo"></ion-icon>
+    </button>
+    
 
-    <ion-icon class="icon-feed"  class="icon-align-bookmark"   ios="ios-bookmark" md="md-bookmark"></ion-icon>
-
+    <button class="icon-align-bookmark">
+      <ion-icon ios="ios-bookmark" md="md-bookmark"></ion-icon>
+    </button>
     <div class="card-subtitle">100 Likes</div>
   </ion-card>
 

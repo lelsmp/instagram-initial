@@ -13,6 +13,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProfilePage } from '../pages/profile/profile';
 import { Ng2SearchPipeModule } from 'ng2-search-filter'; 
 import { VideoPlayer } from '@ionic-native/video-player/ngx';
+import { UserprofilePage } from '../pages/userprofile/userprofile';
+import { UserprofilePageModule } from '../pages/userprofile/userprofile.module';
+
 
 @NgModule({
   declarations: [
@@ -22,13 +25,15 @@ import { VideoPlayer } from '@ionic-native/video-player/ngx';
     HomePage,
     TabsPage,
     ProfilePage,
+    
   
     
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    UserprofilePageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -38,6 +43,7 @@ import { VideoPlayer } from '@ionic-native/video-player/ngx';
     HomePage,
     TabsPage,
     ProfilePage,
+
   
     
   ],
