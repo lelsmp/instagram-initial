@@ -11,7 +11,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ProfilePage } from '../pages/profile/profile';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter'; 
+import { VideoPlayer } from '@ionic-native/video-player/ngx';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,14 @@ import { ProfilePage } from '../pages/profile/profile';
     ContactPage,
     HomePage,
     TabsPage,
-    ProfilePage
+    ProfilePage,
+  
     
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    Ng2SearchPipeModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,12 +37,15 @@ import { ProfilePage } from '../pages/profile/profile';
     ContactPage,
     HomePage,
     TabsPage,
-    ProfilePage
+    ProfilePage,
+  
     
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Ng2SearchPipeModule,
+    VideoPlayer,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
